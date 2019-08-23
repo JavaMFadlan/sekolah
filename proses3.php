@@ -3,6 +3,7 @@
 if (isset($_POST['login'])){
     $login = $_POST ['username'];
     $alamat = $_POST ['saran'];
+    $nisn = $_POST ['nomor'];
     $asal = $_POST ['asal'];
     $ayah = $_POST ['ayah'];
     $ibu = $_POST ['ibu'];
@@ -33,14 +34,16 @@ if (isset($_POST['login'])){
             $password = "Tidak Aktif";
     }
         echo "Nama : $login <br>";
+        echo "NISN : $nisn <br>";
         echo "Alamat : $alamat <br>";
-        echo "Jenis Kelamin : $asal <br>";
-        echo "Jenis Kelamin : $ayah <br>";
-        echo "Jenis Kelamin : $payah <br>";
-        echo "Jenis Kelamin : $pibu <br>";
-        echo "Jenis Kelamin : $jurusan <br>";
-        echo "Jenis Kelamin : $tempat <br>";
-        echo "Jenis Kelamin : $tanggal <br>";
+        echo "Asal Sekolah : $asal <br>";
+        echo "Nama Ayah : $ayah <br>";
+        echo "Pekerjaan Ayah : $payah <br>";
+        echo "Nama Ibu : $ibu <br>";
+        echo "Pekerjaan Ibu : $pibu <br>";
+        echo "Jurusan : $jurusan <br>";
+        echo "Tempat Lahir : $tempat <br>";
+        echo "Tanggal Lahir : $tanggal <br>";
         echo "Hobi : <br>";
     if (isset($_POST['hobi'])) {
         echo "<li>".$_POST['hobi']." <br>";
