@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="POST">
+<form method="GET">
     <fieldset>
     <legend>Form Array</legend>
     <label>Array</label>
@@ -16,8 +16,8 @@
     </form>
     <form action="formarraypro.php" method="post">
 <?php
-if (isset($_POST[input])) {
-    $no = $_POST['array'];
+if (isset($_GET[input])) {
+    $no = $_GET['array'];
     for ($i=1; $i <= $no; $i++) {
         ?>    
         
