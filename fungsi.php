@@ -33,7 +33,7 @@ echo luas_lingkaran($r);
 echo "<br><br><br>";
 
 function tambah_string($str){
-    $str = $str . ", Jakarta";
+    $str = $str . ", Bandung";
     return $str;
 }
 //
