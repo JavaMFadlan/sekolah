@@ -1,3 +1,6 @@
+<?php
+session_start();
+if (isset($_SESSION['login'])) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +23,7 @@
     <input type="number" name="tb" min="1"><br>
     <input type="submit" value="simpan" name="simpan">
     </form>
+    <a href="logout.php"><input type="submit" name="login" value="logout"></a><br>
     </fieldset>
     <?php
     if (isset($_GET['simpan'])) {
@@ -39,11 +43,10 @@
         $terima = tni($bb,$tb);
         echo "NAMA = $nama ";
         echo "Berat Anda = <b>$bb</b> dengan Tinggi = <b>$tb</b> Anda <b>$terima</b>";
-    }
-    
-    
-    
-    
-    ?>
+    }?>
 </body>
 </html>
+
+<?php }else {
+    die("Anda Belum Login. Silahkan Login<a href=home.php>disini</a>");
+}?>

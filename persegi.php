@@ -1,3 +1,6 @@
+<?php
+session_start();
+if (isset($_SESSION['login'])) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,9 @@
     <label for="">SISI</label>
     <input type="number" name="s" min="1"><br>
     <input type="submit" value="simpan" name="simpan">
+    
     </form>
+    <a href="logout.php"><input type="submit" name="login" value="logout"></a><br>
     </fieldset>
     <?php
     if (isset($_GET['simpan'])) {
@@ -28,10 +33,13 @@
         $d = luas_persegi($sisi);
         echo "Hasil Dari Luas Persegi Yaitu $d";
     }
-    
-    
-    
-    
     ?>
 </body>
 </html>
+
+<?php }
+else {
+    die("Anda Belum Login. Silahkan Login<a href=home.php>disini</a>");
+}
+
+?>
